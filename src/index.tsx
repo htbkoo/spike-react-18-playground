@@ -5,12 +5,22 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import reportWebVitals from './reportWebVitals';
 
+// The following will switch back to React 17 behaviour
+// Reference: https://reactjs.org/blog/2022/03/08/react-18-upgrade-guide.html#updates-to-client-rendering-apis
+/*
+import ReactDOM from 'react-dom';
+const container = document.getElementById('root');
+ReactDOM.render(<App/>, container);
+*/
+
 const container = document.getElementById('root');
 const root = createRoot(container!);
 root.render(
-    <React.StrictMode>
+    // Disabling React.StrictMode to avoid the unmount/remount simulation testing
+    // Reference: https://reactjs.org/blog/2022/03/08/react-18-upgrade-guide.html#updates-to-strict-mode
+    // <React.StrictMode>
         <App />
-    </React.StrictMode>
+    // </React.StrictMode>
 );
 
 // If you want your app to work offline and load faster, you can change
