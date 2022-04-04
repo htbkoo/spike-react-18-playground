@@ -19,7 +19,7 @@ root.render(
     // Disabling React.StrictMode to avoid the unmount/remount simulation testing
     // Reference: https://reactjs.org/blog/2022/03/08/react-18-upgrade-guide.html#updates-to-strict-mode
     // <React.StrictMode>
-        <App />
+    <App />
     // </React.StrictMode>
 );
 
